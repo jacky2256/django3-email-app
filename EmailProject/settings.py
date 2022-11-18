@@ -42,8 +42,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    'crispy_forms',
+
+    # Custom apps
     'contact',
 ]
+
+# Indicates the frontend framework django crispy forms use
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -132,19 +138,19 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Email settings
 # Previous settings ..
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = env('EMAIL_HOST')
-EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-
-#EMAIL_HOST = 'smtp.gmail.com'
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_HOST = env('EMAIL_HOST')
+#EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+#EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 #EMAIL_PORT = 587
 #EMAIL_USE_TLS = True
-#EMAIL_HOST_USER = 'a.bojic76@gmail.com'
-#EMAIL_HOST_PASSWORD = 'votihpxzycygpnog'
-#RECIPENT_ADDRES = 'a.bojic22@gmail.com'
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'a.bojic76@gmail.com'
+EMAIL_HOST_PASSWORD = 'votihpxzycygpnog'
+RECIPENT_ADDRES = 'a.bojic22@gmail.com'
 
 # Custom setting. To email
-RECIPENT_ADDRES = env('RECIPENT_ADDRES')
+#RECIPENT_ADDRES = env('RECIPENT_ADDRES')
